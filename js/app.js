@@ -801,17 +801,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const playBtn = document.getElementById("playMusicBtn");
 const popup = document.getElementById("music-popup");
+const playBtn = document.getElementById("playMusicBtn");
+const closeBtn = document.getElementById("closePopup");
 
-playBtn.addEventListener("click", () => {
+if(playBtn){
 
-    playMainSong();      // Existing function
+playBtn.addEventListener("click",()=>{
 
-    popup.style.opacity = "0";
+playMainSong();
 
-    setTimeout(() => {
-        popup.style.display = "none";
-    }, 500);
+popup.style.display="none";
 
 });
+
+}
+
+if(closeBtn){
+
+closeBtn.addEventListener("click",()=>{
+
+popup.style.display="none";
+
+});
+
+}
