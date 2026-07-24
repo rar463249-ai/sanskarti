@@ -795,3 +795,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+
+
+
+
+const playBtn = document.getElementById("playMusicBtn");
+const popup = document.getElementById("music-popup");
+
+playBtn.addEventListener("click", () => {
+
+    playMainSong();      // Existing function
+
+    popup.style.opacity = "0";
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 500);
+
+});
